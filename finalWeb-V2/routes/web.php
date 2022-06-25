@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { //muestra la vista principal
+    return view('index');
+}); 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('persona', '\App\Http\Controllers\PersonaController');
+
+Auth::routes();
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['prefix' => 'admin','as' => 'admin'], function () {
+    Route::get('/', function () {return view('admin.admin'); });
+    Route::get('/usuario', function () {return view('admin.admin'); });
+    Route::get('/producto', function () {return view('admin.index'); });
+});
