@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PersonaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -21,15 +22,21 @@ Route::get('/', function () { //muestra la vista principal
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('persona', '\App\Http\Controllers\PersonaController');
+Route::resource('admin', '\App\Http\Controllers\PersonaController');
 
 Auth::routes();
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::group(['prefix' => 'admin','as' => 'admin'], function () {
-    Route::get('/', function () {return view('admin.admin'); });
-    Route::get('/usuario', function () {return view('admin.admin'); });
-    Route::get('/producto', function () {return view('admin.index'); });
-});
+/* Route::group(['prefix' => 'admin', 'as' => 'admin'], function(){
+    route::get ('/', [PersonaController::class, 'index']) -> name('index');
+    route::get ('usuarios', [PersonaController::class, 'create']) -> name('create');
+    route::post ('usuarios', [PersonaController::class, 'store']) -> name('store');
+    route::get ('editar_usuario', [PersonaController::class, 'edit']) -> name('edit');
+    route::post ('editar_usuario', [PersonaController::class, 'edit']) -> name('edit');
+
+
+    
+
+}); */

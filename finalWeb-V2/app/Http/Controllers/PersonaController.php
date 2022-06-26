@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Persona;
+use App\Models\TipoPersona;
 
 class PersonaController extends Controller
 {
@@ -14,7 +15,8 @@ class PersonaController extends Controller
      */
     public function index()//Muestra la tabla con toda la info de la BD
     {
-        return view('admin.tabla_gestion_personas') -> with('personas', Persona::all());
+        return view('Admin.tabla_gestion_personas') -> with('personas', Persona::all());
+        
     }
 
     /**
@@ -24,7 +26,8 @@ class PersonaController extends Controller
      */
     public function create()//vista para ver el formulario
     {
-        return view('Admin.crear_persona');
+        $tipo_personas = TipoPersona::all();
+        return view('Admin.crear_persona', compact('tipo_personas'));
     }
 
     /**
@@ -33,9 +36,16 @@ class PersonaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request)//guarda en la BD
     {
-        //
+        $persona = new Persona();
+        $persona ->nombre = $request-> nombre;
+        $persona ->apellidos = $request-> apellidos;
+        $persona ->telefono = $request-> telefono;
+        $persona ->id_tipo_persona = $request-> id_tipo_persona;
+        $persona->save();
+
+        return redirect()->route('admin.index');
     }
 
     /**
@@ -55,9 +65,11 @@ class PersonaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id)//edita el producto
     {
-        //
+        $persona = Persona::find($id);
+        $tipo_personas = TipoPersona::all();
+        return view ('Admin.editar_persona', compact('tipo_personas'))->with ('personas',$persona);
     }
 
     /**
@@ -67,9 +79,15 @@ class PersonaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id)//consulta para modificar los elementos de la BD
     {
-        //
+        $persona = Persona::find($id);
+        $persona->nombre = $request->nombre;
+        $persona->apellidos = $request-> apellidos;
+        $persona->telefono = $request-> telefono;
+        $persona->id_tipo_persona = $request-> id_tipo_persona;
+        $persona->save();
+        return redirect()->route('admin.index');
     }
 
     /**
@@ -78,8 +96,10 @@ class PersonaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id)//elimina los elementos de la BD
     {
-        //
+        $persona = Persona::find($id);
+        $persona -> delete();
+        return redirect()->route('admin.index');
     }
 }

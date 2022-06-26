@@ -3,10 +3,9 @@
 @section('contenido')
 
     <div class="container">
-    <h1>Mostrar Usuarios</h1>
-        <a href="{{route ('personas.create')}}">
-            <button type="button" class="btn btn-info">Crear producto</button>
-        </a>
+    <a href="{{route ('admin.create')}}">
+        <button type="button" class="btn btn-primary">Crear producto</button>
+    </a>
         <br>
         <br>
         <table class="table">
@@ -30,13 +29,17 @@
                     <td>{{$personas->telefono}}</td>
                     <td>{{$personas->id_tipo_persona}}</td>
                     <td>
-                        <a href="">
-                            <button type="button" class="btn btn-primary">Modificar</button>
+                        <a href="{{route ('admin.edit', $personas->id)}}">
+                            <button type="button" class="btn btn-primary">
+                                <i class="fa fa-edit"></i>
+                            </button>
                         </a>
-                        <form action="" method="post">
+                        <form action="{{route ('admin.destroy', $personas ?? '' ->id)}}" method="post">
                             @method('DELETE')
                             @csrf
-                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                            <button type="submit" class="btn btn-danger">
+                            <i class="fa fa-trash"></i>    
+                            </button>
                         </form>
                     </td>
 
