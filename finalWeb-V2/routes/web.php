@@ -21,12 +21,12 @@ Route::get('/', function () { //muestra la vista principal
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\PersonaController::class, 'index'])->name('index');
 Route::resource('admin', '\App\Http\Controllers\PersonaController');
 Route::resource('productos', '\App\Http\Controllers\ProductoController');
 
 Auth::routes();
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

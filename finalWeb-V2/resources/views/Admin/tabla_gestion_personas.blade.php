@@ -1,5 +1,4 @@
 @extends('Admin.main')
-
 @section('contenido')
 
     <div class="container">
