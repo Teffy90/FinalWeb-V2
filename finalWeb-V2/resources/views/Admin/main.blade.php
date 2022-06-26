@@ -55,10 +55,10 @@
           <a href="{{route ('admin.index')}}"><i class="fas fa-home"></i>Gestionar Usuario</a>
         </li>
         <li>
-          <a href="/admin/productos"><i class="fas fa-clipboard"></i>Gestionar Producto</a>
+          <a href="{{route ('productos.index')}}"><i class="fas fa-clipboard"></i>Gestionar Producto</a>
         </li>
         <li>
-          <a href=""><i class="fas fa-user-cog"></i>Salir</a>
+            <a href=""><i class="fas fa-sign-out-alt"></i>Salir</a>
         </li>
         
       </ul>

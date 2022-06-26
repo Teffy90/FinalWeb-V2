@@ -4,7 +4,7 @@
 
     <div class="container">
     <a href="{{route ('admin.create')}}">
-        <button type="button" class="btn btn-primary">Crear producto</button>
+        <button type="button" class="btn btn-primary">Crear Usuario</button>
     </a>
         <br>
         <br>

@@ -65,7 +65,7 @@ class PersonaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)//edita el producto
+    public function edit($id)//edita al usuario
     {
         $persona = Persona::find($id);
         $tipo_personas = TipoPersona::all();
