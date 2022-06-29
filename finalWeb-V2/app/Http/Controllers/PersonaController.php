@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Persona;
 use App\Models\TipoPersona;
+use Barryvdh\DomPDF\Facade as PDF;
+Barryvdh\DomPDF\Facade::class;
 
 class PersonaController extends Controller
 {
@@ -101,5 +103,12 @@ class PersonaController extends Controller
         $persona = Persona::find($id);
         $persona -> delete();
         return redirect()->route('admin.index');
+    }
+
+    public function descargarPDF()//descarga el pdf
+    {
+        $personas = Persona::all();
+        $pdf = PDF::loadView('Admin.crear_pdf_usuarios', compact('personas'));
+        return $pdf->download('lista_personas.pdf');
     }
 }

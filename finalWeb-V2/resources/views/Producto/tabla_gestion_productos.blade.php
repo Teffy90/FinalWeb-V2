@@ -6,6 +6,9 @@
     <a href="{{route ('productos.create')}}">
         <button type="button" class="btn btn-primary">Crear producto</button>
     </a>
+    <a href="{{route ('descargarPDF2')}}">
+        <button type="button" class="btn btn-primary">Generar listado de Productos</button>
+    </a>
         <br>
         <br>
         <table class="table">

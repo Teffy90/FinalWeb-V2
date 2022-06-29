@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Producto;
 use App\Models\Categoria;
+use Barryvdh\DomPDF\Facade as PDF;
+Barryvdh\DomPDF\Facade::class;
 
 
 class ProductoController extends Controller
@@ -110,5 +112,12 @@ class ProductoController extends Controller
         $producto = Producto::find($id);
         $producto -> delete();
         return redirect()->route('productos.index');
+    }
+
+    public function descargarPDF2()//descarga el pdf
+    {
+        $productos = Producto::all();
+        $pdf = PDF::loadView('Producto.crear_pdf_productos', compact('productos'));
+        return $pdf->download('lista_productos.pdf');
     }
 }

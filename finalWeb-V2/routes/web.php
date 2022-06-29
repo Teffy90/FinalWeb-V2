@@ -25,6 +25,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\PersonaController::class, 'index'])->name('index');
 Route::resource('admin', '\App\Http\Controllers\PersonaController');
 Route::resource('productos', '\App\Http\Controllers\ProductoController');
+Route::get('downloadUser-pdf','\App\Http\Controllers\PersonaController@descargarPDF')->name('descargarPDF');
+Route::get('downloadProducto-pdf','\App\Http\Controllers\ProductoController@descargarPDF2')->name('descargarPDF2');
 
 Auth::routes();
 
