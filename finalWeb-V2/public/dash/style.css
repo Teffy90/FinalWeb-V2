@@ -4,7 +4,7 @@
   -webkit-box-sizing:border-box;
 }
 .blue {
-  background: #2abdfc;
+  background: #BB8FCE;
   color: #fff;
 }
 .navbar {
@@ -28,7 +28,7 @@ i { margin: 0 7px; }
   margin: 0 20px;
 }
 #sidebarCollapse:hover {
-  color: #2abdfc;
+  color: #BB8FCE;
   background: #fff;
   outline: none;
 }
@@ -44,7 +44,7 @@ i { margin: 0 7px; }
     min-width: 250px;
     max-width: 250px;
     margin-top: 70px;
-    background: #6a76f8;
+    background: #BB8FCE;
     color: #fff;
     transition: all 0.3s;
 }
@@ -54,7 +54,7 @@ i { margin: 0 7px; }
 
 #sidebar .sidebar-header{
 	padding: 20px;
-	background: #6a76f8;
+	background: #BB8FCE;
 }
 #sidebar ul.components{
 	padding: 20px 0px;

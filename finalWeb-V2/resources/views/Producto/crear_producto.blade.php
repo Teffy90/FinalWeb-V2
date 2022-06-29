@@ -4,7 +4,7 @@
             
             <div class="container col-sm-8">
             <h2>Añadir Producto</h2>
-                <form action="{{route('productos.store')}}" method="post">
+                <form action="{{route('productos.store')}}" method="post" id="formularioProducto">
                     @csrf
                     <div>
                         <div class="form group">
@@ -53,7 +53,7 @@
                         <a href="/productos">
                             <button type="button" class="btn btn-secondary">Cancelar</button>
                         </a>                        
-                        <button type="submit" class="btn btn-primary">Crear</button>
+                        <button type="submit" class="btn text-white" style="background-color: #BB8FCE">Crear</button>
                     </div>
 
                 </form>

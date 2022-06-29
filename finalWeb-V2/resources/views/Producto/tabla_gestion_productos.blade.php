@@ -4,10 +4,10 @@
 
     <div class="container">
     <a href="{{route ('productos.create')}}">
-        <button type="button" class="btn btn-primary">Crear producto</button>
+        <button type="button" class="btn text-white" style="background-color: #BB8FCE">Crear producto</button>
     </a>
     <a href="{{route ('descargarPDF2')}}">
-        <button type="button" class="btn btn-primary">Generar listado de Productos</button>
+        <button type="button" class="btn text-white" style="background-color: #BB8FCE">Generar listado de Productos</button>
     </a>
         <br>
         <br>

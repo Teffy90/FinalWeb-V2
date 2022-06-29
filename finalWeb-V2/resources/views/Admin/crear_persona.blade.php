@@ -4,7 +4,7 @@
             
             <div class="container col-sm-8">
             <h2>Crear Usuario</h2>
-                <form action="{{route('admin.store')}}" method="post">
+                <form action="{{route('admin.store')}}" method="post" id="formularioUsuario" name="formularioUsuario">
                     @csrf
                     <div>
                         <div class="form group">
@@ -37,7 +37,7 @@
                         <a href="{{route ('admin.index')}}">
                             <button type="button" class="btn btn-secondary">Cancelar</button>
                         </a>                        
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="submit" class="btn text-white" style="background-color: #BB8FCE">Guardar</button>
                     </div>
 
                 </form>

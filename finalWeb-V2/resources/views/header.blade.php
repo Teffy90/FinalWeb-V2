@@ -79,9 +79,9 @@
             @yield('contenido2')
         </main>
 
-<div class="container my-5" style="background-color: #D7BDE2">
+<div  style="background-color: #BB8FCE">
 
-<footer class="text-white text-center text-lg-start bg-primary"  >
+<footer class="text-white text-center text-lg-start "  >
 
 <div class="container p-4" style="background-color: #BB8FCE">
   

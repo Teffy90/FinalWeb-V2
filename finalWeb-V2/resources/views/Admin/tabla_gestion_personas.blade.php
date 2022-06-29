@@ -3,10 +3,10 @@
 
     <div class="container">
     <a href="{{route ('admin.create')}}">
-        <button type="button" class="btn btn-primary">Crear Usuario</button>
+        <button type="button" class="btn text-white" style="background-color: #BB8FCE">Crear Usuario</button>
     </a>
     <a href="{{route ('descargarPDF')}}">
-        <button type="button" class="btn btn-primary">Generar listado de Usuarios</button>
+        <button type="button" class="btn text-white" style="background-color: #BB8FCE">Generar listado de Usuarios</button>
     </a>
         <br>
         <br>
