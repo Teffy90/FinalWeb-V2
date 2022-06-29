@@ -2,6 +2,8 @@
 
 @section('contenido2')
 
+<div class="container">
+  
 <h1>Supermercado Buena Fortuna</h1>
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
   <div class="carousel-indicators">
@@ -34,32 +36,42 @@
     <br>
         <!-- cards -->
         <div class="row row-cols-1 row-cols-md-3 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="imagenes/Carnes_pollo.png" class="card-img-top d-block mx-auto" width="200" height="260"alt="...">
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="imagenes/Despensa.png" class="card-img-top d-block mx-auto" width="200" height="260" alt="...">
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="imagenes/Lacteos.png" class="card-img-top d-block mx-auto" width="200" height="260" alt="...">
-    </div>
-  </div>
-  <div class="col d-block mx-auto" >
-    <div class="card h-100">
-      <img src="imagenes/Frutas_verduras.png" class="card-img-top d-block mx-auto" width="200" height="260" alt="...">
-    </div>
-  </div>
-  <div class="col d-block mx-auto">
-    <div class="card h-100">
-      <img src="imagenes/Limpieza.png" class="card-img-top d-block mx-auto" width="200" height="260" alt="...">
-    </div>
-  </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="imagenes/Carnes_pollo.png" class="card-img-top d-block mx-auto" width="200" height="260"alt="...">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="imagenes/Despensa.png" class="card-img-top d-block mx-auto" width="200" height="260" alt="...">
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="imagenes/Lacteos.png" class="card-img-top d-block mx-auto" width="200" height="260" alt="...">
+            </div>
+          </div>
+          <div class="col d-block mx-auto" >
+            <div class="card h-100">
+              <img src="imagenes/Frutas_verduras.png" class="card-img-top d-block mx-auto" width="200" height="260" alt="...">
+            </div>
+          </div>
+          <div class="col d-block mx-auto">
+            <div class="card h-100">
+              <img src="imagenes/Limpieza.png" class="card-img-top d-block mx-auto" width="200" height="260" alt="...">
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <h2>Datos de Interes</h2>
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+            <div id="grafica1" class="col align-self-center"></div>
+          </div>
+        </div>
+
 </div>
+
 
 
 @endsection
