@@ -1,10 +1,12 @@
 @extends('Admin.main')
-
 @section('contenido')
 
     <div class="container">
     <a href="{{route ('admin.create')}}">
-        <button type="button" class="btn btn-primary">Crear producto</button>
+        <button type="button" class="btn btn-primary">Crear Usuario</button>
+    </a>
+    <a href="{{route ('descargarPDF')}}">
+        <button type="button" class="btn btn-primary">Generar listado de Usuarios</button>
     </a>
         <br>
         <br>

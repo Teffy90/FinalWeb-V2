@@ -21,22 +21,14 @@ Route::get('/', function () { //muestra la vista principal
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\PersonaController::class, 'index'])->name('index');
 Route::resource('admin', '\App\Http\Controllers\PersonaController');
+Route::resource('productos', '\App\Http\Controllers\ProductoController');
+Route::get('downloadUser-pdf','\App\Http\Controllers\PersonaController@descargarPDF')->name('descargarPDF');
+Route::get('downloadProducto-pdf','\App\Http\Controllers\ProductoController@descargarPDF2')->name('descargarPDF2');
 
 Auth::routes();
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-/* Route::group(['prefix' => 'admin', 'as' => 'admin'], function(){
-    route::get ('/', [PersonaController::class, 'index']) -> name('index');
-    route::get ('usuarios', [PersonaController::class, 'create']) -> name('create');
-    route::post ('usuarios', [PersonaController::class, 'store']) -> name('store');
-    route::get ('editar_usuario', [PersonaController::class, 'edit']) -> name('edit');
-    route::post ('editar_usuario', [PersonaController::class, 'edit']) -> name('edit');
-
-
-    
-
-}); */
