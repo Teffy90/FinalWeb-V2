@@ -78,9 +78,60 @@
         <main class="py-4">
             @yield('contenido2')
         </main>
-        <footer>
-            aqui va el footer
-        </footer>
+
+<div class="container my-5" style="background-color: #D7BDE2">
+
+<footer class="text-white text-center text-lg-start bg-primary"  >
+
+<div class="container p-4" style="background-color: #BB8FCE">
+  
+  <div class="row mt-4">
+
+    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+      <h5 class="text-uppercase mb-4">Buena fortuna</h5>
+
+      <p>
+        En nuestro super mercado encontraras todos los productos que necesitas para tu hogar a precios insuperables.
+      </p>
+
     </div>
+    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+      <h5 class="text-uppercase mb-4 pb-1">Contactanos</h5>
+
+      <ul class="fa-ul" style="margin-left: 1.65em;">
+        <li class="mb-3">
+          <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Manizales, Caldas, COL</span>
+        </li>
+        <li class="mb-3">
+          <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">buenafortuna@gmail.com</span>
+        </li>
+        <li class="mb-3">
+          <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">304-386-1307</span>
+        </li>
+        <li class="mb-3">
+          <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">321-953-7671</span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4 mb-md-0" >
+      <h5 class="text-uppercase mb-4">Horarios atención</h5>
+
+      <table class="table text-center text-white">
+        <tbody class="font-weight-normal">
+          <tr>
+            <td>Lun - Sab:</td>
+            <td>7:30am - 8pm</td>
+          </tr>
+          <tr>
+            <td>Dom - Fes:</td>
+            <td>8am - 7Pm</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> 
+</div>
+</footer>
+</div>
 </body>
 </html>
